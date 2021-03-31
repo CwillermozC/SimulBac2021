@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title> SIMULATEUR Notes de BAC 2021  </title>
+
+    <!-- Lien vers le CSS -->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <!-- Lien vers le Javascript -->
+    <script src="simul.js" charset="utf-8" defer="defer"></script>        
+</head>
+
+<body>
+	<header id="en-tete">
+	<img id="imghead"  src="img/NDA.png"/ />
+			
+	</header>
+    <form class= "form_2021_1ère">
+		<div class="titre">
+			<p > Simulateur 2021 de calcul des résultats du bac en cours d'année de Première </br>
+			Prenez vos bulletins trimestriels (toutes les épreuves de contrôle continu sont 
+			remplacées par les moyennes du bulletin) </p>
+			<div id="reponse"> 
+       
+			</div>
+			<div class="sep"></div>
+		</div>
+		<div>
+			<label class= "Bulletins1"> Moyenne des bulletins de 1ère - Coef 5 </label>
+		</div>
+		<div class="matiere2"> 
+			<label for="bul_T1">1er trimestre :</label>
+			<input type="number"  min="0" max="20" step="0.01" id="bul_T1" >
+			<label for="bul_T1">2ème trimestre :</label>
+			<input type="number" min="0" max="20" step="0.01"  id="bul_T2"  >
+			<label for="bul_T1">3ème trimestre :</label>
+			<input type="number" min="0" max="20" step="0.01"  id="bul_T3"  >
+		</div>
+		<div class="sep"></div>
+		<div>
+			<label class= "Bulletins1"> Evaluations communes 1ère (Moyennes de bulletins) </label>
+		</div>
+		<div class="matiere1"> <div class = "matieres">HISTOIRE-GEO - coef 2.5 </div>
+			<label for="HG_T1">1er trimestre :</label>
+			<input type="number"  min="0" max="20" step="0.01" id="HG_T1" >
+			<label for="HG_T2">2ème trimestre :</label>
+			<input type="number" min="0" max="20" step="0.01"  id="HG_T2"  >
+			<label for="HG_T3">3ème trimestre :</label>
+			<input type="number" min="0" max="20" step="0.01"  id="HG_T3"  >
+		</div>
+		<div class="matiere2"> <div class = "matieres">LVA - coef 2.5</div>
+			<label for="LVA_T1">1er trimestre :</label>
+			<input type="number"  min="0" max="20" step="0.01" id="LVA_T1" >
+			<label for="LVA_T2">2ème trimestre :</label>
+			<input type="number" min="0" max="20" step="0.01"  id="LVA_T2"  >
+			<label for="LVA_T3">3ème trimestre :</label>
+			<input type="number" min="0" max="20" step="0.01"  id="LVA_T3"  >
+		</div>
+		<div class="matiere1"> <div class = "matieres">LVB - coef 2.5</div>
+			<label for="LVB_T1">1er trimestre :</label>
+			<input type="number"  min="0" max="20" step="0.01" id="LVB_T1" >
+			<label for="LVB_T2">2ème trimestre :</label>
+			<input type="number" min="0" max="20" step="0.01"  id="LVB_T2"  >
+			<label for="LVB_T3">3ème trimestre :</label>
+			<input type="number" min="0" max="20" step="0.01"  id="LVB_T3"  >
+		</div>
+		<div class="matiere2"> <div class = "matieres">Enseignement Scientifique - coef 2.5</div>
+			<label for="ES_T1">1er trimestre :</label>
+			<input type="number"  min="0" max="20" step="0.01" id="ES_T1" >
+			<label for="ES_T2">2ème trimestre :</label>
+			<input type="number" min="0" max="20" step="0.01"  id="ES_T2"  >
+			<label for="ES_T3">3ème trimestre :</label>
+			<input type="number" min="0" max="20" step="0.01"  id="ES_T3"  >
+		</div>
+		<div class="matiere1"> <div class = "matieres">3ème spécialité - coef 5</div>
+			<label for="SPE3_T1">1er trimestre :</label>
+			<input type="number"  min="0" max="20" step="0.01" id="SPE3_T1" >
+			<label for="SPE3_T2">2ème trimestre :</label>
+			<input type="number" min="0" max="20" step="0.01"  id="SPE3_T2"  >
+			<label for="SPE3_T3">3ème trimestre :</label>
+			<input type="number" min="0" max="20" step="0.01"  id="SPE3_T3"  >
+		</div>
+		<div class="sep"></div>
+		<div>
+			<label class= "Bulletins1"> Français - Evaluation finale </label>
+		</div>
+		<div class="matiere1"> <div class = "matieres">ECRIT - coef 5 </div>
+			<label for="FR_EC">note ou moyenne des 3 bulletins :</label>
+			<input type="number"  min="0" max="20" step="0.01" id="FR_EC" >
+		</div>
+		<div class="matiere2"> <div class = "matieres">ORAL - coef 5 </div>
+			<label for="FR_OR">note ou moyenne des 3 bulletins :</label>
+			<input type="number"  min="0" max="20" step="0.01" id="FR_OR" >
+		</div>
+		<div class="centre">
+			<button class="bouton" type="button" onclick="simuler()"> Simulation </button>
+		</div>
+    </form>
+	</div>
+	
+	
+	<footer>
+			<img id="imgfoot"  src="img/cc.png"/ />
+			<p>
+				Auteur : C.Willermoz
+			</p>
+				
+	</footer>
+
+
+    
+</body>
+</html>
