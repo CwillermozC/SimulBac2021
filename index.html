@@ -13,13 +13,18 @@
 </head>
 
 <body>
-	<header id="en-tete">
-	<img id="imghead"  src="img/NDA.png"/ />
-			
+	<header >
+	 <div  id="en-tete">
+		<img id="imghead"  src="img/NDA.png"/ />
+		<h2> Simulateur pour le BAC 2021-2022 </h2>
+		<div id="reponse_T"> </div>	
+	  </div>
 	</header>
-    <form class= "form_2021_1ère">
+	<div class="col">
+	 <div class="col1">
+      <form class= "form_2021_1ère">
 		<div class="titre">
-			<p > Simulateur 2021 de calcul des résultats du bac en cours d'année de Première </br>
+			<p > Calcul des résultats du bac en cours d'année de PREMIERE </br>
 			Prenez vos bulletins trimestriels (toutes les épreuves de contrôle continu sont 
 			remplacées par les moyennes du bulletin) </p>
 			<div id="reponse"> 
@@ -33,9 +38,9 @@
 		<div class="matiere2"> 
 			<label for="bul_T1">1er trimestre :</label>
 			<input type="number"  min="0" max="20" step="0.01" id="bul_T1" >
-			<label for="bul_T1">2ème trimestre :</label>
+			<label for="bul_T2">2ème trimestre :</label>
 			<input type="number" min="0" max="20" step="0.01"  id="bul_T2"  >
-			<label for="bul_T1">3ème trimestre :</label>
+			<label for="bul_T3">3ème trimestre :</label>
 			<input type="number" min="0" max="20" step="0.01"  id="bul_T3"  >
 		</div>
 		<div class="sep"></div>
@@ -95,16 +100,110 @@
 			<input type="number"  min="0" max="20" step="0.01" id="FR_OR" >
 		</div>
 		<div class="centre">
-			<button class="bouton" type="button" onclick="simuler()"> Simulation </button>
+			<button class="bouton" type="button" onclick="simuler_1()"> Simulation </button>
 		</div>
-    </form>
+      </form>
+	 </div>
+	 <div class = "col2">
+	  <form class= "form_2021_Term">
+		<div class="titre">
+			<p > Calcul des résultats du bac en TERMINALE </br>
+			Vous pouvez saisir les notes que vous espérez obtenir. </p>
+			
+			<div class="sep"></div>
+		</div>
+		<div>
+			<label class= "Bulletins1"> Moyenne des bulletins de Term - Coef 5 </label>
+		</div>
+		<div class="matiere2"> 
+			<label for="bul_T1_T">1er trimestre :</label>
+			<input type="number"  min="0" max="20" step="0.01" id="bul_T1_T" >
+			<label for="bul_T2_T">2ème trimestre :</label>
+			<input type="number" min="0" max="20" step="0.01"  id="bul_T2_T"  >
+			<label for="bul_T3_T">3ème trimestre :</label>
+			<input type="number" min="0" max="20" step="0.01"  id="bul_T3_T"  >
+		</div>
+		<div class="sep"></div>
+		<div>
+			<label class= "Bulletins1"> Evaluations communes Term </label>
+		</div>
+		<div class="matiere1 tab"> 
+		  <div class="tab1">
+			<div class = "matieres">HISTOIRE-GEO - coef 2.5</div>
+			
+			<label for="HG_EC3">EC3 :</label>
+			<input type="number"  min="0" max="20" step="0.01" id="HG_EC3" >
+		  </div>
+		  <div class="tab2">
+			<div class = "matieres">LVA - coef 2.5 </div>
+			<label for="LVA_EC3">EC3 :</label>
+			<input type="number"  min="0" max="20" step="0.01" id="LVA_EC3" >
+		  </div>
+		  <div class="tab3">
+			<div class = "matieres">LVB - coef 2.5 </div>
+			<label for="LVB_EC3">EC3 :</label>
+			<input type="number"  min="0" max="20" step="0.01" id="LVB_EC3" >
+		  </div>
+		</div>
+		
+		<div class="matiere2 tab"> 
+		  <div class="tab1">
+			<div class = "matieres">EPS - coef 5</div>
+			<label for="EPS_EC3">EC3 :</label>
+			<input type="number"  min="0" max="20" step="0.01" id="EPS_EC3" >
+		  </div>
+		  <div class="tab2">
+			<div class = "matieres">Enseignement Scientifique - coef 2.5</div>
+			<label for="ES_EC3">EC3 :</label>
+			<input type="number"  min="0" max="20" step="0.01" id="ES_EC3" >
+		  </div>
+		</div>
+		
+		<div class="sep"></div>
+		<div>
+			<label class= "Bulletins1"> Spécialités de terminale - Evaluation finale </label>
+		</div>
+		<div class="matiere1 tab"> 
+		  <div class="tab1">
+			<div class = "matieres">Spécialité 1 - coef 16 </div>
+			<label for="SPE1">Note  :</label>
+			<input type="number"  min="0" max="20" step="0.01" id="SPE1" >
+		  </div>
+		  <div class="tab2">
+			<div class = "matieres">Spécialité 2 - coef 16 </div>
+			<label for="SPE2">Note :</label>
+			<input type="number"  min="0" max="20" step="0.01" id="SPE2" >
+		  </div>
+		</div>
+		<div class="sep"></div>
+		<div>
+			<label class= "Bulletins1"> Epreuves finales  </label>
+		</div>
+		<div class="matiere2 tab"> 
+		  <div class="tab1">
+			<div class = "matieres">Philosophie - coef 8 </div>
+			<label for="PHI">Note  :</label>
+			<input type="number"  min="0" max="20" step="0.01" id="PHI" >
+		  </div>
+		  <div class="tab2">
+			<div class = "matieres">Grand Oral - coef 10 </div>
+			<label for="GO">Note :</label>
+			<input type="number"  min="0" max="20" step="0.01" id="GO" >
+		  </div>
+		</div>
+		<div class="centre">
+			<button class="bouton" type="button" onclick="simuler_2()"> Simulation finale </button>
+		</div>
+	   
+      </form>
 	</div>
+</div>	
 	
 	
 	<footer>
 			<img id="imgfoot"  src="img/cc.png"/ />
 			<p>
-				Auteur : C.Willermoz
+				Auteur : C.Willermoz <br> Ce simulateur peut différer légèrement des résultats officiels du Bac.
 			</p>
 				
 	</footer>
